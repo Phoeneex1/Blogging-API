@@ -77,6 +77,7 @@ async function getBlogs(req, res, next) {
                     {
                         tags: { $regex: search, $options: "i" },
                     }
+                    
                 ],
             }).limit(limit).skip(skip)
             return res.status(200).json({

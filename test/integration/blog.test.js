@@ -21,15 +21,15 @@ const login = async (email) => {
 describe('Blog Route', () => {
     let blog_id
     test('POST /blog works', async () => {
-        let user = 'joker@gmail.com'
+        let user = 'phoeneex2@gmail.com'
         let token = await login(user)
         const newBlog = {
             title: "Test Blog",
             description: "This is a simple blog to test if this endpoint works",
-            body: `Hi, I'm zainab and I would really liek to becoem a backend end dev.
-                    I'm an altschool studnet and we've been learning cool stuff. 
+            body: `Hi, I'm daniel and I would really like to become a backend end dev.
+                    I'm an altschool student and we've been learning cool stuff. 
                     Can you believe I just learnt how to write JS and I'm now writing
-                    tests and building an API. I feel so happy.`,
+                    tests and building an API. I feel so happy about it.`,
             tags: "school"
         }
     
@@ -50,7 +50,7 @@ describe('Blog Route', () => {
         expect(response.body).not.toContain('draft')
     })
     test('GET /blog/userBlog works', async()=>{
-        let user = 'joker@gmail.com'
+        let user = 'phoeneex2@gmail.com'
         let token = await login(user)
 
         const response = await api
@@ -62,15 +62,15 @@ describe('Blog Route', () => {
     })
 
     test('PUT /blog/:id works', async()=>{
-        let user = 'joker@gmail.com'
+        let user = 'phoeneex2@gmail.com'
         let token = await login(user)
         const newBlog = {
             title: "Test Blog 2",
             description: "This is a simple blog to test if this endpoint works",
-            body: `Hi, I'm zainab and I would really liek to becoem a backend end dev.
-                    I'm an altschool studnet and we've been learning cool stuff. 
+            body: `Hi, I'm daniel and I would really like to become a backend end dev.
+                    I'm an altschool student and we've been learning cool stuff. 
                     Can you believe I just learnt how to write JS and I'm now writing
-                    tests and building an API. I feel so happy.`,
+                    tests and building an API. I feel so happy about it.`,
             tags: "work"
         }
         const response = await api

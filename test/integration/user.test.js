@@ -4,7 +4,7 @@ const supertest = require('supertest')
 const api = supertest(app)
 const User = require('../../models/user.model')
 
-jest.setTimeout(30000);
+jest.setTimeout(30002);
 
 
 

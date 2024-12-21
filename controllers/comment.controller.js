@@ -22,7 +22,7 @@ async function createComment(req,res,next){
 
         res.status(201).json(savedComment);
     } catch (error) {
-        logger.error(`Error: ${error} when trying to create a commnont on a user's blog with id ${req.params.id}`)
+        logger.error(`Error: ${error} when trying to create a commnent on a user's blog with id ${req.params.id}`)
         res.status(500).json({ message: error.message });
     }
 }
